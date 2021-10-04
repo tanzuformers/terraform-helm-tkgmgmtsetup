@@ -60,9 +60,9 @@ data "sshcommand_command" "vault_unseal_keys" {
     depends_on = [
       sshclient_run.vault_unseal
     ]
-    host = var.tkg_bootvm.ip
+    host = var.tkg_bootvm_ip
     user = "root"
-    password = var.tkg_bootvm.password
+    password = var.tkg_bootvm_password
     command = "cat /root/vault-cluster-keys.json"
 }
 resource "local_file" "get_vault-cluster-keys" {

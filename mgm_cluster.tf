@@ -9,7 +9,7 @@ resource "kubernetes_storage_class" "default_storge_class" {
     }
     storage_provisioner = "csi.vsphere.vmware.com"
     parameters = {
-        datastoreurl = var.tkg_env.datastore_url
+        datastoreurl = var.tkg_env_datastore_url
     }
     #mount_options = ["file_mode=0700", "dir_mode=0777", "mfsymlinks", "uid=1000", "gid=1000", "nobrl", "cache=none"]
 }

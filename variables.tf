@@ -4,28 +4,21 @@ variable "output_path"{
 }
 
 ## Suggested a dedicated env for tkg clusters
-variable "tkg_env" {
-    type = object({
-        datastore_url = string
-    })
-    default = {
-        datastore_url = "ds:///vmfs/volumes/5b0b0910-295caf38-a57d-ac1f6b1bfc94/"
-    }
+variable "tkg_env_datastore_url" {
+    type = string
+    description = "Url of the datastore in the format ds:///vmfs/volumes/xxxxxxxxxxxxxxxxxx/"
 }
-
-
-variable tkg_bootvm {
-    type = object({
-        ip = string
-        password = string
-    })
-    default = {
-        ip = "192.168.206.10"
-        password = ""
-    }
+variable "tkg_bootvm_ip" {
+    type = string
+    description = "BootVM IP"
+}
+variable "tkg_bootvm_password" {
+    type = string
+    description = "BootVM Password"
 }
 
 variable "tkg_mgmt" {
+    description = "Tanzu Kubernetes Management Cluster data"
     type = object({
         kubeconfig_file = string
         ip = string

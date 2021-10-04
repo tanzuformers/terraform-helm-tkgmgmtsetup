@@ -53,15 +53,16 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_output_path"></a> [output\_path](#input\_output\_path) | n/a | `string` | `"."` | no |
-| <a name="input_tkg_bootvm"></a> [tkg\_bootvm](#input\_tkg\_bootvm) | n/a | <pre>object({<br>        ip = string<br>        password = string<br>    })</pre> | <pre>{<br>  "ip": "192.168.206.10",<br>  "password": ""<br>}</pre> | no |
-| <a name="input_tkg_env"></a> [tkg\_env](#input\_tkg\_env) | # Suggested a dedicated env for tkg clusters | <pre>object({<br>        datastore_url = string<br>    })</pre> | <pre>{<br>  "datastore_url": "ds:///vmfs/volumes/5b0b0910-295caf38-a57d-ac1f6b1bfc94/"<br>}</pre> | no |
-| <a name="input_tkg_mgmt"></a> [tkg\_mgmt](#input\_tkg\_mgmt) | n/a | <pre>object({<br>        kubeconfig_file = string<br>        ip = string<br>        loadbalancer_cidr = string<br>    })</pre> | <pre>{<br>  "ip": "192.168.206.11",<br>  "kubeconfig_file": "./kubeconfig",<br>  "loadbalancer_cidr": "192.168.206.60-192.168.206.70"<br>}</pre> | no |
+| <a name="input_tkg_bootvm_ip"></a> [tkg\_bootvm\_ip](#input\_tkg\_bootvm\_ip) | BootVM IP | `string` | n/a | yes |
+| <a name="input_tkg_bootvm_password"></a> [tkg\_bootvm\_password](#input\_tkg\_bootvm\_password) | BootVM Password | `string` | n/a | yes |
+| <a name="input_tkg_env_datastore_url"></a> [tkg\_env\_datastore\_url](#input\_tkg\_env\_datastore\_url) | Url of the datastore in the format ds:///vmfs/volumes/xxxxxxxxxxxxxxxxxx/ | `string` | n/a | yes |
+| <a name="input_tkg_mgmt"></a> [tkg\_mgmt](#input\_tkg\_mgmt) | Tanzu Kubernetes Management Cluster data | <pre>object({<br>        kubeconfig_file = string<br>        ip = string<br>        loadbalancer_cidr = string<br>    })</pre> | <pre>{<br>  "ip": "192.168.206.11",<br>  "kubeconfig_file": "./kubeconfig",<br>  "loadbalancer_cidr": "192.168.206.60-192.168.206.70"<br>}</pre> | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_vault_keys"></a> [vault\_keys](#output\_vault\_keys) | n/a |
-| <a name="output_vault_root_token"></a> [vault\_root\_token](#output\_vault\_root\_token) | n/a |
-| <a name="output_vault_server"></a> [vault\_server](#output\_vault\_server) | n/a |
+| <a name="output_vault_keys"></a> [vault\_keys](#output\_vault\_keys) | Vault Keys file location |
+| <a name="output_vault_root_token"></a> [vault\_root\_token](#output\_vault\_root\_token) | Vault root token |
+| <a name="output_vault_server"></a> [vault\_server](#output\_vault\_server) | The IP of vault instance |
 <!-- END_TF_DOCS -->

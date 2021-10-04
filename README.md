@@ -52,7 +52,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_output_path"></a> [output\_path](#input\_output\_path) | n/a | `string` | `"."` | no |
+| <a name="input_output_path"></a> [output\_path](#input\_output\_path) | Local path folder for input/output files (kubectl) | `string` | `"."` | no |
 | <a name="input_tkg_bootvm_ip"></a> [tkg\_bootvm\_ip](#input\_tkg\_bootvm\_ip) | BootVM IP | `string` | n/a | yes |
 | <a name="input_tkg_bootvm_password"></a> [tkg\_bootvm\_password](#input\_tkg\_bootvm\_password) | BootVM Password | `string` | n/a | yes |
 | <a name="input_tkg_env_datastore_url"></a> [tkg\_env\_datastore\_url](#input\_tkg\_env\_datastore\_url) | Url of the datastore in the format ds:///vmfs/volumes/xxxxxxxxxxxxxxxxxx/ | `string` | n/a | yes |

@@ -1,4 +1,5 @@
 variable "output_path"{
+    description = "Local path folder for input/output files (kubectl)"
     type = string
     default = "."
 }
